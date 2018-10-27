@@ -1,0 +1,29 @@
+validation(){
+       const {fullName, email,password,confirmPassword, phoneno, schoolName} = this.state;
+       var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+       if(!fullName.length){
+           Alert.alert('','Enter your name');
+           return false
+       }
+       else if(!re.test(email.toLowerCase())){
+           Alert.alert('','Enter valid email');
+           return false;
+       }
+       else if (!password.length) {
+           Alert.alert('','Enter password');
+           return false;
+       }
+       else if(password !== confirmPassword){
+           Alert.alert('','Password not matched');
+           return false
+       }
+       else if(!phoneno.length){
+           Alert.alert('','Enter Phone Number');
+           return false;
+       }
+       else if(!schoolName.length){
+           Alert.alert('','Select School');
+           return false;
+       }
+       return true;
+   }

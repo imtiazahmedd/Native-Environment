@@ -1,0 +1,6 @@
+splash screen
+https://github.com/bamlab/generator-rn-toolbox/blob/master/generators/assets/README.md
+
+react-native init --version="0.36.0" MyNewApp
+create project with specific version
+
